@@ -44,11 +44,27 @@
                         <outlet property="constraintLeftTop" destination="EaT-Of-dow" id="aNL-eZ-5pr"/>
                         <outlet property="rightMBallTop" destination="hk9-hT-5jH" id="CLf-U2-Tqh"/>
                         <outlet property="starTop" destination="gTq-AG-rnw" id="jRc-Be-JpN"/>
+                        <segue destination="KL4-fm-YJy" kind="show" identifier="animateSegway" id="Xbi-QE-4JH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="384.80000000000001" y="37.331334332833585"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="R03-6e-2Ii">
+            <objects>
+                <viewController id="KL4-fm-YJy" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lce-Kx-ldw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="GP8-nP-TZU"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="htW-8z-sIL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1303" y="36"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Qj3-Um-kMg">

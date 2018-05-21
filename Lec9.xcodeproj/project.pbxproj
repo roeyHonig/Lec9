@@ -13,6 +13,7 @@
 		6D26371920B29B6700E31A2A /* Lec9.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6D26371720B29B6700E31A2A /* Lec9.xcdatamodeld */; };
 		6D26371B20B29B6700E31A2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D26371A20B29B6700E31A2A /* Assets.xcassets */; };
 		6D26371E20B29B6700E31A2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D26371C20B29B6700E31A2A /* LaunchScreen.storyboard */; };
+		6D26372620B29CD100E31A2A /* sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6D26372520B29CD100E31A2A /* sound.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		6D26371A20B29B6700E31A2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6D26371D20B29B6700E31A2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6D26371F20B29B6700E31A2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D26372520B29CD100E31A2A /* sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		6D26370F20B29B6700E31A2A /* Lec9 */ = {
 			isa = PBXGroup;
 			children = (
+				6D26372520B29CD100E31A2A /* sound.wav */,
 				6D26371020B29B6700E31A2A /* AppDelegate.swift */,
 				6D26371220B29B6700E31A2A /* ViewController.swift */,
 				6D26371420B29B6700E31A2A /* Main.storyboard */,
@@ -128,6 +131,7 @@
 			files = (
 				6D26371E20B29B6700E31A2A /* LaunchScreen.storyboard in Resources */,
 				6D26371B20B29B6700E31A2A /* Assets.xcassets in Resources */,
+				6D26372620B29CD100E31A2A /* sound.wav in Resources */,
 				6D26371620B29B6700E31A2A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,7 +283,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GA3LC47ZM3;
 				INFOPLIST_FILE = Lec9/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = student.roey.honig.Lec9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -293,7 +299,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GA3LC47ZM3;
 				INFOPLIST_FILE = Lec9/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = student.roey.honig.Lec9;
 				PRODUCT_NAME = "$(TARGET_NAME)";

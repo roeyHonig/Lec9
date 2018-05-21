@@ -17,8 +17,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        saveCastMember()
+        loadCastMember()
         return true
     }
+    
+    
+    func loadCastMember() {
+        // 1) init NSFetchRequest
+        let req = NSFetchRequest<NSManagedObject>(entityName: "CastMember")
+    
+        // 2). context -> run the request
+        if let castMembers = try? context.fetch(req){
+            for member in castMembers{
+                print(member)
+            }
+        }
+    
+    }
+    
+    func saveCastMember(){
+        // how do we work with core data ?
+        // 1) init NsManagedObject
+        let description = NSEntityDescription.entity(forEntityName: "CastMember", in: context)!
+        let robert = NSManagedObject(entity: description, insertInto: context)
+        // set the attributes
+        robert.setValue("Robert", forKey: "firstName")
+        robert.setValue("Zane", forKey: "lastName")
+        robert.setValue(60, forKey: "age")
+        // call the method saveContext - which will save to the hard disk
+    }
+    
+    
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -72,10 +102,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         })
         return container
     }()
+    
+    lazy var context: NSManagedObjectContext = {return persistentContainer.viewContext}()
 
     // MARK: - Core Data Saving support
 
-    func saveContext () {
+    func saveContext ()  {
         let context = persistentContainer.viewContext
         if context.hasChanges {
             do {
@@ -87,6 +119,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
+       
     }
 
 }

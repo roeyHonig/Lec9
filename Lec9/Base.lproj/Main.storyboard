@@ -18,18 +18,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIN-81-Jdh">
-                                <rect key="frame" x="166" y="323" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-pikachu_pokemon" translatesAutoresizingMaskIntoConstraints="NO" id="VEQ-fg-HXC">
+                                <rect key="frame" x="16" y="83" width="96" height="96"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-star_pokemon" translatesAutoresizingMaskIntoConstraints="NO" id="QBR-Wr-eYb">
+                                <rect key="frame" x="139.5" y="309" width="96" height="96"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-pokeball" translatesAutoresizingMaskIntoConstraints="NO" id="Dc8-oG-xmH">
+                                <rect key="frame" x="263" y="83" width="96" height="96"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dc8-oG-xmH" secondAttribute="trailing" constant="16" id="6oQ-Q8-nN3"/>
+                            <constraint firstItem="VEQ-fg-HXC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="19" id="EaT-Of-dow"/>
+                            <constraint firstItem="VEQ-fg-HXC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ZRw-9I-cQB"/>
+                            <constraint firstItem="QBR-Wr-eYb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="245" id="gTq-AG-rnw"/>
+                            <constraint firstItem="Dc8-oG-xmH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="19" id="hk9-hT-5jH"/>
+                            <constraint firstItem="QBR-Wr-eYb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uCA-is-U2H"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="KyI-NJ-wHT"/>
+                    <connections>
+                        <outlet property="constraintLeftTop" destination="EaT-Of-dow" id="aNL-eZ-5pr"/>
+                        <outlet property="rightMBallTop" destination="hk9-hT-5jH" id="CLf-U2-Tqh"/>
+                        <outlet property="starTop" destination="gTq-AG-rnw" id="jRc-Be-JpN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -54,4 +69,9 @@
             <point key="canvasLocation" x="-417" y="37"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icons8-pikachu_pokemon" width="96" height="96"/>
+        <image name="icons8-pokeball" width="96" height="96"/>
+        <image name="icons8-star_pokemon" width="96" height="96"/>
+    </resources>
 </document>

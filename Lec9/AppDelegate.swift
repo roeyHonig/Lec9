@@ -30,7 +30,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // 2). context -> run the request
         if let castMembers = try? context.fetch(req){
             for member in castMembers{
-                print(member)
+                let firstName = member.value(forKey: "firstName") as! String
+                let LastName = member.value(forKey: "lastName") as! String
+                let age = member.value(forKey: "age") as! Int
+                print(firstName , LastName, age)
             }
         }
     
@@ -48,6 +51,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // call the method saveContext - which will save to the hard disk
     }
     
+    func saveCastMember(fName: String , lName: String, age: Int){
+        // how do we work with core data ?
+        // 1) init NsManagedObject
+        let description = NSEntityDescription.entity(forEntityName: "CastMember", in: context)!
+        let robert = NSManagedObject(entity: description, insertInto: context)
+        // set the attributes
+        robert.setValue(fName, forKey: "firstName")
+        robert.setValue(lName, forKey: "lastName")
+        robert.setValue(age, forKey: "age")
+        // call the method saveContext - which will save to the hard disk
+    }
     
 
     func applicationWillResignActive(_ application: UIApplication) {

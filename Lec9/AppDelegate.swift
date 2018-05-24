@@ -23,9 +23,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     
-    func loadCastMember() {
+    func loadCastMember()-> [Member] {
         // 1) init NSFetchRequest
         let req = NSFetchRequest<NSManagedObject>(entityName: "CastMember")
+        
+        var members = [Member]() // new Member array
     
         // 2). context -> run the request
         if let castMembers = try? context.fetch(req){
@@ -33,10 +35,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 let firstName = member.value(forKey: "firstName") as! String
                 let LastName = member.value(forKey: "lastName") as! String
                 let age = member.value(forKey: "age") as! Int
-                print(firstName , LastName, age)
+                
+                members.append(Member(firstName: firstName, lastName: LastName, age: age))
             }
         }
-    
+    return members
     }
     
     func saveCastMember(){

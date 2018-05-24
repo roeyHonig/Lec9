@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D065E1120B695640033EFA7 /* SuitsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D065E1020B695640033EFA7 /* SuitsTableViewController.swift */; };
+		6D065E1320B697380033EFA7 /* SuitsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D065E1220B697380033EFA7 /* SuitsTableViewCell.swift */; };
+		6D065E1720B69FD60033EFA7 /* CastMembers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D065E1620B69FD60033EFA7 /* CastMembers.swift */; };
 		6D26371120B29B6700E31A2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D26371020B29B6700E31A2A /* AppDelegate.swift */; };
 		6D26371320B29B6700E31A2A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D26371220B29B6700E31A2A /* ViewController.swift */; };
 		6D26371620B29B6700E31A2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D26371420B29B6700E31A2A /* Main.storyboard */; };
@@ -18,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6D065E1020B695640033EFA7 /* SuitsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuitsTableViewController.swift; sourceTree = "<group>"; };
+		6D065E1220B697380033EFA7 /* SuitsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuitsTableViewCell.swift; sourceTree = "<group>"; };
+		6D065E1620B69FD60033EFA7 /* CastMembers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastMembers.swift; sourceTree = "<group>"; };
 		6D26370D20B29B6700E31A2A /* Lec9.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lec9.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D26371020B29B6700E31A2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6D26371220B29B6700E31A2A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +75,9 @@
 				6D26371F20B29B6700E31A2A /* Info.plist */,
 				6D26371720B29B6700E31A2A /* Lec9.xcdatamodeld */,
 				6D26372720B2BA3B00E31A2A /* SuitsViewController.swift */,
+				6D065E1020B695640033EFA7 /* SuitsTableViewController.swift */,
+				6D065E1220B697380033EFA7 /* SuitsTableViewCell.swift */,
+				6D065E1620B69FD60033EFA7 /* CastMembers.swift */,
 			);
 			path = Lec9;
 			sourceTree = "<group>";
@@ -146,10 +155,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D065E1320B697380033EFA7 /* SuitsTableViewCell.swift in Sources */,
 				6D26371320B29B6700E31A2A /* ViewController.swift in Sources */,
 				6D26371120B29B6700E31A2A /* AppDelegate.swift in Sources */,
 				6D26371920B29B6700E31A2A /* Lec9.xcdatamodeld in Sources */,
+				6D065E1720B69FD60033EFA7 /* CastMembers.swift in Sources */,
 				6D26372820B2BA3B00E31A2A /* SuitsViewController.swift in Sources */,
+				6D065E1120B695640033EFA7 /* SuitsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

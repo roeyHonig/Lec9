@@ -18,7 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         saveCastMember()
-        loadCastMember()
+        saveCastMember(fName: "roey", lName: "honig", age: 36)
+        saveCastMember(fName: "Rotem", lName: "Walzer", age: 37)
+        //loadCastMember()
         return true
     }
     

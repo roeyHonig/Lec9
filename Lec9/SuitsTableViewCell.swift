@@ -9,7 +9,11 @@
 import UIKit
 
 class SuitsTableViewCell: UITableViewCell {
-
+    var mem: Member!
+    @IBAction func tapped(_ sender: UIButton) {
+        // do something with regards to the mem
+        // look at the TableviewController to see how we init it
+    }
     @IBOutlet weak var firstNameLabel: UILabel!
     @IBOutlet weak var lastNameLable: UILabel!
     @IBOutlet weak var ageLabel: UILabel!

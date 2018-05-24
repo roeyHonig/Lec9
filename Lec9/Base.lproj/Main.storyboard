@@ -134,6 +134,14 @@
                                                 </label>
                                             </subviews>
                                         </stackView>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mVb-2F-v2n">
+                                            <rect key="frame" x="164" y="58" width="46" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Button"/>
+                                            <connections>
+                                                <action selector="tapped:" destination="zH6-UN-iQ1" eventType="touchUpInside" id="Ugi-SJ-CPP"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="bottomMargin" secondItem="ltZ-0s-B4K" secondAttribute="bottom" constant="16" id="M2M-ZH-WDY"/>

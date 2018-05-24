@@ -35,22 +35,44 @@ class SuitsTableViewController: UITableViewController {
     // i need to go to app delegate -> fetch our cast member:
     // field:
     // lazy vars
+    // the lazy var is kind like a way to overpass a constractor
+    
+    
+    lazy var members: [Member] = {
+        let delegate = UIApplication.shared.delegate as! AppDelegate // force casting to AppDelegate
+        // once we have the app delegate i can just call the function
+        return delegate.loadCastMember()
+    }()
     
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return members.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        // init Cell or reuse cell
+        // force cast the cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "suitsCell", for: indexPath) as! SuitsTableViewCell // we've added this last part of the forcecasting, that's polymotpisim
 
         // Configure the cell...
-
+        let member = members[indexPath.row]
+        
+        // data binding
+        cell.mem = member
+        cell.firstNameLabel.text = member.firstName
+        cell.lastNameLable.text = member.lastName
+        cell.ageLabel.text = "\(member.age)" // String interpolation
+        
         return cell
     }
-    */
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // called when the user preseed the entire raw
+        // we've learned how to pass data to another viewController using the saguw and perform with identifier
+    }
+ 
 
     /*
     // Override to support conditional editing of the table view.
